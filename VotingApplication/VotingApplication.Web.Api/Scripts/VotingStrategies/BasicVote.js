@@ -105,6 +105,10 @@
             }
         };
 
+        self.resetVotes = function () {
+            clearOptionHighlighting();
+        }
+
         self.getVotes = function (pollId, userId) {
             $.ajax({
                 type: 'GET',
@@ -114,9 +118,6 @@
                 success: function (data) {
                     if (data[0]) {
                         highlightOption(data[0].OptionId);
-                    }
-                    else {
-                        clearOptionHighlighting();
                     }
                 }
             });

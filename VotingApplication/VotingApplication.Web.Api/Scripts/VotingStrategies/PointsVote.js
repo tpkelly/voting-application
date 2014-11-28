@@ -10,7 +10,7 @@
         var maxPoints = 7;
         var maxPerVote = 3;
         
-        var resetVote = function () {
+        self.resetVotes = function () {
             //Populate with an array of options.length number of 0-values
             self.pointsArray(Array.apply(null, Array(options.length)).map(Boolean).map(Number));
             updateAllButtons();

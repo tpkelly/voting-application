@@ -28,7 +28,7 @@
             });
         }
 
-        var resetOptions = function () {
+        self.resetVotes = function () {
             $('#optionTable > tbody').append($('#selectionTable > tbody').remove('tr').children());
         }
 
@@ -170,8 +170,6 @@
         };
 
         self.getVotes = function (pollId, userId) {
-            resetOptions();
-
             $.ajax({
                 type: 'GET',
                 url: '/api/user/' + userId + '/poll/' + pollId + '/vote',

@@ -90,6 +90,7 @@
                     Common.loginUser(data, username);
                     self.userId = data;
                     showSection($('#voteSection'));
+                    votingStrategy.resetVotes();
                 },
 
                 error: function (jqXHR, textStatus, errorThrown) {
